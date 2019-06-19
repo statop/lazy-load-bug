@@ -37,7 +37,7 @@ And you are basically taking the responsibility of chunk creation away from the 
 
 **The core problem seems to be that the lazy loading mechanism cannot pick and choose stuff out of barrel files**
 
-When you depend on a barrel, everything in that barrel becomes a part of your chunk.
+Everything in that barrel will always be a part of the same chunk. It will never get split up.
 
 
 

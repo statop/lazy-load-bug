@@ -35,7 +35,7 @@ You could start adding secondary entry points for everything that you want to be
 
 And you are basically taking the responsibility of chunk creation away from the lazy loading mechanism and giving it to the dev, who will not be as smart.
 
-** The core problem seems to be that the lazy loading mechanism cannot pick and choose stuff out of barrel files **
+**The core problem seems to be that the lazy loading mechanism cannot pick and choose stuff out of barrel files**
 
 When you depend on a barrel, everything in that barrel becomes a part of your chunk.
 

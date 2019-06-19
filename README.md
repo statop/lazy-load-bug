@@ -12,9 +12,9 @@ To help understand this, do the following -
 * click entry2-route
 * see that entry2.module.ts is lazy loaded, and it shares the common chunk with entry1.module.ts
 * click entry3-route
-* see that entry3.module.ts is lazy loaded, with common2/bike.ts
+* see that entry3.module.ts is lazy loaded, with common2/bike.ts in the same chunk
 * click entry4-route
-* see that entry4.module.ts is lazy loaded, with common2/van.ts
+* see that entry4.module.ts is lazy loaded, with common2/van.ts in the same chunk
 
 
 What this demonstrates is that lazy loading can be very smart, but it's not smart when you put stuff in a library.

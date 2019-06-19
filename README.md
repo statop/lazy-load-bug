@@ -28,7 +28,7 @@ But it was not smart enough to do the same for stuff in test-lib/common.
 This is because to get to things in test-lib/common, we must go through a barrel file, the public api for test-lib/common.
 
 So - 
-* Given ng-packagrs stance that there is only a single public api per entry point
+* Given ng-packagr's stance that there is only a single public api per entry point
 * **It impossible to have common libraries that lazy load properly**
 
 You could start adding secondary entry points for everything that you want to be bundled separately, but this quickly escalates to having a secondary entry point for basically every file.
@@ -37,7 +37,11 @@ And you are basically taking the responsibility of chunk creation away from the 
 
 **The core problem seems to be that the lazy loading mechanism cannot pick and choose stuff out of barrel files**
 
-Everything in that barrel will always be a part of the same chunk. It will never get split up.
+Everything in a barrel will always be a part of the same chunk. It will never get split up.
+
+And by creating a angular cli library (ng-packagr), you are effectivly creating a barrel.
+
+It is possible to create a library with a custom webpack build that allows imports like 'test-lib/common/truck', but it cannot be done with proper angular cli libraries.
 
 
 
